@@ -1,4 +1,4 @@
-# Requirements
+# Product Requirements
 
 ## What do we need?
 - LogIn/SignUp
