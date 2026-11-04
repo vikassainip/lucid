@@ -1,3 +1,3 @@
 rootProject.name = "lucid"
 
-include("lucid-api")
+include("lucid-api", "lucid-core")

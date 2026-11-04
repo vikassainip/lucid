@@ -2,35 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
   <title>Lucid</title>
+  <script src="scripts/auth.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!isLoggedIn()) {
+        window.location.replace('pages/login.html');
+        return;
+      }
+
+      window.location.replace('pages/home.html');
+    });
+  </script>
 </head>
 <body>
   <div id="app">
-    <header class = "header">
-      <div class="logo">
-        Lucid
-      </div>
-      <nav class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">Chats</a>
-        <a href="#">Contacts</a>
-      </nav>
-
-      <button class="profile-btn">
-        Profile
-      </button>
-    </header>
-    <div id = "chat-container">
-      <div id = "chat-history">
-        <h2>some msg</h2>
-        <h2>some more msg</h2>
-      </div>
-      <div id = "chat-input">
-        <input type="text" id="message" placeholder="Type your message...">
-        <button id="send">Send</button>
-      </div>
-    </div>
+    <nav>
+      <a href="pages/login.html">Login</a>
+      <a href="pages/chats.html">Chats</a>
+    </nav>
   </div>
 </body>
 </html>
