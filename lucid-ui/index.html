@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lucid</title>
+  <script src="scripts/auth.js" defer></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!isLoggedIn()) {
+        window.location.replace('pages/login.html');
+        return;
+      }
+
+      window.location.replace('pages/home.html');
+    });
+  </script>
+</head>
+<body>
+  <div id="app">
+    <nav>
+      <a href="pages/login.html">Login</a>
+      <a href="pages/chats.html">Chats</a>
+    </nav>
+  </div>
+</body>
+</html>
